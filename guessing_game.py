@@ -1,3 +1,4 @@
+##Simple code
 secret_num = 8
 guess_count = -1
 Guess_limit = 2
