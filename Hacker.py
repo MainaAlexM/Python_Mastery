@@ -1,5 +1,181 @@
-# Day 6
-# Sort an input string with even index first, space separator, followed by odd indices
+        # Day 1
+        # String Output
+
+        # Read a full line of input from stdin and save it to our dynamically typed variable, input_string.
+input_string = input()
+
+# Print a string literal saying "Hello, World." to stdout.
+print('Hello, World.')
+
+# TODO: Write a line of code here that prints the contents of input_string to stdout.
+print (input_string)
+
+
+
+    # Day 2
+    # Datatypes
+
+
+i = 4
+d = 4.0
+s = 'HackerRank '
+# Declare second integer, double, and String variables.
+
+# Read and save an integer, double, and String to your variables.
+
+# Print the sum of both integer variables on a new line.
+
+# Print the sum of the double variables on a new line.
+
+# Concatenate and print the String variables on a new line
+# The 's' variable above should be printed first.
+#print(s)
+
+j = int(input())
+f = float(input())
+z = str(input())
+
+m = i + j
+print (m)
+g = d + f
+print (g)
+
+print (s+z)
+
+
+
+
+    # Day 2
+    # Operators
+
+    #!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'solve' function below.
+#
+# The function accepts following parameters:
+#  1. DOUBLE meal_cost
+#  2. INTEGER tip_percent
+#  3. INTEGER tax_percent
+#
+
+def solve(meal_cost, tip_percent, tax_percent):
+    # Write your code here
+    
+    tip = float((meal_cost * tip_percent)/100)
+    tax = float((meal_cost * tax_percent)/100)
+    
+    total_cost = meal_cost + tip + tax
+    
+    print (round(total_cost))
+
+
+if __name__ == '__main__':
+    meal_cost = float(input().strip())
+
+    tip_percent = int(input().strip())
+
+    tax_percent = int(input().strip())
+
+    solve(meal_cost, tip_percent, tax_percent)
+
+
+
+    # Day 3
+    # Intro to conditional statements
+
+    #!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    N = int(input().strip())
+if N%2==0:
+    if N in range(6, 21):
+        print("Weird")
+    else:
+        print("Not Weird")
+    
+else: print ("Weird")
+
+
+
+    # Day 4
+    # Class vs Instance
+
+class Person:
+    def __init__(self,initialAge):
+        # Add some more code to run some checks on initialAge
+        self.initialAge = initialAge
+        if self.initialAge >=0:
+            self.age = initialAge
+        else:
+            self.age = 0
+            print("Age is not valid, setting age to 0.")
+    def amIOld(self):
+        # Do some computations in here and print out the correct statement to the console
+        
+        if self.age >= 13:
+            if self.age <18:
+                print("You are a teenager.")
+            else:
+                print("You are old.")
+        else:
+            print("You are young.")
+            
+    def yearPasses(self):
+        # Increment the age of the person in here
+        self.age +=1
+
+t = int(input())
+for i in range(0, t):
+    age = int(input())         
+    p = Person(age)  
+    p.amIOld()
+    for j in range(0, 3):
+        p.yearPasses()       
+    p.amIOld()
+    print("")
+
+
+    # Day 5
+    # Loops
+
+    #!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    n = int(input().strip())
+for i in range(1, 11):
+    result = n*i
+    print(n, 'x', i, '=', result)
+else:
+    pass
+
+
+
+    # Day 6
+    # Let's Review
+    # Sort an input string with even index first, space separator, followed by odd indices
 T = int(input())
 for i in range(0, T):
     S = input()
@@ -7,6 +183,7 @@ for i in range(0, T):
     
 
 #Day 7
+# Arrays
 # Print the reverse of Aray Items, separated by space
 #not using .reverse(). .  .
     import math
@@ -27,7 +204,9 @@ print(" ".join(A))
 
 
 
-# Day 8 MAPPING NAME AND NUMBER
+# Day 8 
+# Dictionaries and Maps
+# MAPPING NAME AND NUMBER
 #Key-Value pair mappings using a Map or Dictionary data structure
 #Given  names and phone numbers, assemble a phone book that maps friends' names to their respective phone numbers. You will then be given an unknown number of names to query your phone book for.
 
@@ -52,7 +231,8 @@ while True:
         break
 
 
-    # DAY 9 >> RECURSION
+    # DAY 9 >> 
+    # RECURSION 3
     import math
 import os
 import random
@@ -90,7 +270,8 @@ if __name__ == '__main__':
     fptr.close()
 
 
-# DAY 10 
+    # DAY 10 
+    # Binary numbers
 # #Incrementing count when the binary result of converting base ten number contains consecutive 1s
 #!/bin/python3
 #
@@ -124,8 +305,8 @@ print(max_conseq_1s)
 
 
 
-# Day 11
-        #2D Arrays (Matrix)
+    # Day 11
+    #2D Arrays (Matrix)
 # sumaion of an hour glass
 #!/bin/python3
 
@@ -234,7 +415,10 @@ s.printPerson()
 print("Grade:", s.calculate())
 
 
-    # Day 13: Abstract Classes
+
+
+    # Day 13: 
+    # Abstract Classes
 
 from abc import ABCMeta, abstractmethod
 class Book(object, metaclass=ABCMeta):
@@ -266,7 +450,8 @@ new_novel.display()
 
 
         # Day 14
-        #Scope  ... Difference between max and min numbers in an array
+        #Scope  
+        # ... Difference between max and min numbers in an array
 class Difference:
     def __init__(self, a):
         self.__elements = a
@@ -295,3 +480,9 @@ d = Difference(a)
 d.computeDifference()
 
 print(d.maximumDifference)
+
+
+
+    # Day 15 
+    # Linked List
+    
