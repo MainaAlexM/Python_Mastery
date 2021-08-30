@@ -169,14 +169,16 @@ print(max_hg_sum)
         # Day 12
         # Inheritance
     
-class Person:
-    	def __init__(self, firstName, lastName, idNumber):
-		self.firstName = firstName
-		self.lastName = lastName
-		self.idNumber = idNumber
-	def printPerson(self):
-		print("Name:", self.lastName + ",", self.firstName)
-		print("ID:", self.idNumber)
+class Person():
+    def __init__(self, firstName, lastName, idNumber):
+	    self.firstName = firstName
+	    self.lastName = lastName
+	    self.idNumber = idNumber
+
+
+    def printPerson(self):
+	    print("Name:", self.lastName + ",", self.firstName)
+	    print("ID:", self.idNumber)
 
 class Student(Person):
     #   Class Constructor
@@ -216,7 +218,7 @@ class Student(Person):
             return "A"
         elif average < 90:
             return "E"
-        elif average < 100:
+        else:
             return "O"
     
     
@@ -230,3 +232,66 @@ scores = list( map(int, input().split()) )
 s = Student(firstName, lastName, idNum, scores)
 s.printPerson()
 print("Grade:", s.calculate())
+
+
+    # Day 13: Abstract Classes
+
+from abc import ABCMeta, abstractmethod
+class Book(object, metaclass=ABCMeta):
+    def __init__(self,title,author):
+        self.title=title
+        self.author=author   
+    @abstractmethod
+    def display(): pass
+
+#Write MyBook class
+class MyBook(Book):
+    def __init__(self, title, author, price):
+        Book.__init__(self, title, author)
+        Book.price = price
+        
+    def display(self):
+        print('Title: ' + self.title)
+        print('Author: ' + self.author)
+        print('Price: ' + str(self.price))
+    
+
+title=input()
+author=input()
+price=int(input())
+new_novel=MyBook(title,author,price)
+new_novel.display()
+
+
+
+
+        # Day 14
+        #Scope  ... Difference between max and min numbers in an array
+class Difference:
+    def __init__(self, a):
+        self.__elements = a
+
+    # Add your code here
+        self.maximumDifference = 0
+    
+    def computeDifference(self):
+        maxVal = 0
+        minVal = 101
+        
+        for element in self.__elements:
+            if element < minVal:
+                minVal = element
+            if element > maxVal:
+                maxVal = element
+                
+        self.maximumDifference = maxVal - minVal
+
+# End of Difference class
+
+_ = input()
+a = [int(e) for e in input().split(' ')]
+
+d = Difference(a)
+d.computeDifference()
+
+print(d.maximumDifference)
