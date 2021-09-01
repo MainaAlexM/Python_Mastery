@@ -484,7 +484,7 @@ print(d.maximumDifference)
 
 
     # Day 15 
-    # Linked List
+    # Linked List . . .  create a lis of nodes linked consecutively on each other
 class Node:
     def __init__(self,data):
         self.data = data
