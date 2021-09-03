@@ -11,7 +11,7 @@ while True:
                 started = True
         elif command == "stop":
             if not started:
-                print("Car is already stopped. Start it")
+                print("Car is already stopped. You need to start it")
             else:
                 started = False
                 print("Car stopped")
@@ -29,6 +29,9 @@ quit - to quit
             elif stopped:
                 print("godbye")
                 started = False
+             
         else:
             print("I can't understand that")
+   else:
+        print("Type 'help' for instruction")
 
