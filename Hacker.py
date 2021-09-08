@@ -1,4 +1,8 @@
-        # Day 1
+# Hackerrank challenges solved from Day1 through day 30
+# [30 Days of code]
+	
+	
+	# Day 1
         # String Output
 
         # Read a full line of input from stdin and save it to our dynamically typed variable, input_string.
