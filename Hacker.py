@@ -1,5 +1,6 @@
 # Hackerrank challenges solved from Day1 through day 30
 # [30 Days of code]
+Daily Trials
 	
 	
 	# Day 1
