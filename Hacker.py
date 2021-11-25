@@ -524,3 +524,55 @@ mylist.display(head);
 
     # Day 16
     
+
+
+
+#	FizzBuzz
+
+
+for i in range(1, n+1):
+        if i % 15 == 0:
+            print("FizzBuzz")
+        elif i % 3 == 0:
+            print("Fizz")
+        elif i % 5 == 0:
+            print("Buzz")
+        else:
+            print(i)
+	
+	
+	# Rev words and swapcase()
+	
+	def reverse_words_order_and_swap_cases(sentence):
+	    word_list = sentence.split()
+	    reversed_list = word_list[:: -1]
+	    reversed_sentence = " ".join(reversed_list)
+	    return reversed_sentence.swapcase()
+	
+	
+	#	Split and join
+	
+	def split_and_join(line):
+	    # write your code here
+	    b = line.split()
+	    result = "-".join(b)
+
+	    return result
+
+	if __name__ == '__main__':
+	    line = input()
+	    result = split_and_join(line)
+	    print(result)
+	
+	
+	#	Swapcase inbuilt
+	def swap_case(s):
+	    result = s.swapcase()
+	    return result
+
+	if __name__ == '__main__':
+	    s = input()
+	    result = swap_case(s)
+	    print(result)
+	
+	
